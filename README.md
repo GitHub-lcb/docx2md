@@ -1,4 +1,4 @@
-﻿# docx2md GUI Tool
+# docx2md GUI Tool
 
 A local Python GUI utility that supports:
 
@@ -37,3 +37,32 @@ For input `report.docx`, the output folder will contain:
 - `report.md`
 - `report_images/`
 - `report.pdf`
+
+## Build EXE (Windows)
+
+### Option 1: one-click
+
+```powershell
+.\build.bat
+```
+
+### Option 2: PowerShell
+
+```powershell
+.\build_exe.ps1
+```
+
+### Clean build
+
+```powershell
+.\build_exe.ps1 -Clean
+```
+
+After build, executable will be at:
+
+- `dist\docx2md-gui.exe`
+
+## Notes for PDF conversion
+
+- `docx -> pdf` depends on Microsoft Word via COM automation.
+- If target machine has no Word installed, PDF conversion may fail.
